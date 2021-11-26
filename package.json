@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "harp server --port $PORT"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Vitaliy-Yakovlev/my-resume/issues"
   },
-  "homepage": "https://github.com/Vitaliy-Yakovlev/my-resume#readme"
+  "homepage": "https://github.com/Vitaliy-Yakovlev/my-resume#readme",
+  "dependencies": {
+    "harp": "*"
+  }
 }
