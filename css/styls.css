@@ -12,6 +12,12 @@ body {
   padding-right: 40px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .wrapper {
   background: #fff;
   display: flex;
@@ -22,13 +28,16 @@ body {
 
 .sidebar {
   background: #1e2939;
-  width: 370px;
+  min-width: 370px;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 .my-photo {
-  width: 370px;
+  width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
 }
 .about-me-container {
   padding-left: 80px;
