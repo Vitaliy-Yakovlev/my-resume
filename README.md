@@ -1,1 +1,1 @@
-# [my-resume](https://vitaliy-resume.herokuapp.com/)
+# [My-resume](https://vitaliy-resume.herokuapp.com/)
