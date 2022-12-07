@@ -1,0 +1,29 @@
+{
+  "name": "my-resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /parcel-deploy-tutorial",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitaliy-Yakovlev/my-resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitaliy-Yakovlev/my-resume/issues"
+  },
+  "homepage": "https://Vitaliy-Yakovlev.github.io/my-resume",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "parcel-plugin-nuke-dist": "^1.0.1"
+  }
+}
