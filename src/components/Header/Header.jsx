@@ -84,10 +84,10 @@ function Header() {
         </Logo>
         <NavLinks>
           {navItems.map(item => (
-            <NavLink 
-              key={item.name} 
-              href={item.href} 
-              variants={navLinkVariants} 
+            <NavLink
+              key={item.name}
+              href={item.href}
+              variants={navLinkVariants}
               whileHover="hover"
               $scrolled={scrolled}
             >
@@ -121,4 +121,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header; 

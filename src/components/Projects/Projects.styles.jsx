@@ -136,3 +136,4 @@ export const ProjectTags = styled.div`
   color: var(--text-secondary);
   margin-top: 8px;
 `;
+ 

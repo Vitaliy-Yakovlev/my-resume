@@ -117,3 +117,4 @@ export const MobileNavLink = styled(motion.a)`
     color: var(--primary-color);
   }
 `;
+ 

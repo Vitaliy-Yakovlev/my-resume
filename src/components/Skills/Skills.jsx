@@ -8,7 +8,6 @@ import {
   Title,
   SkillsContainer,
   SkillsGrid,
-  SoftSkills,
   SkillCard,
 } from './Skills.styles';
 
@@ -79,11 +78,36 @@ const skills = [
 ];
 
 const softSkills = [
-  'Teamwork',
-  'Responsible',
-  'Quick Learning',
-  'Problem Solving',
-  'Attention to Detail',
+  {
+    icon: '👥',
+    title: 'Teamwork',
+    description: 'Effective collaboration and communication within teams',
+    color: '#4CAF50',
+  },
+  {
+    icon: '✓',
+    title: 'Responsible',
+    description: 'Reliable and accountable in all tasks and commitments',
+    color: '#2196F3',
+  },
+  {
+    icon: '🚀',
+    title: 'Quick Learning',
+    description: 'Rapidly adapting to new technologies and concepts',
+    color: '#9C27B0',
+  },
+  {
+    icon: '💡',
+    title: 'Problem Solving',
+    description: 'Creative and analytical approach to challenges',
+    color: '#FF9800',
+  },
+  {
+    icon: '🎯',
+    title: 'Attention to Detail',
+    description: 'Meticulous focus on quality and precision',
+    color: '#F44336',
+  },
 ];
 
 const containerVariants = {
@@ -117,7 +141,7 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Skills & Technologies
+          Technologies
         </Title>
         <SkillsContainer>
           <SkillsGrid>
@@ -146,14 +170,37 @@ const Skills = () => {
               </SkillCard>
             ))}
           </SkillsGrid>
-          <SoftSkills>
-            <h3>Soft Skills</h3>
-            <ul>
-              {softSkills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>
-          </SoftSkills>
+          <Title
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            style={{ fontSize: '32px', marginTop: '48px' }}
+          >
+            Soft Skills
+          </Title>
+          <SkillsGrid>
+            {softSkills.map((skill, index) => (
+              <SkillCard
+                key={skill.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{
+                  y: -5,
+                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.15)',
+                }}
+                style={{
+                  borderTop: `3px solid ${skill.color}`,
+                }}
+              >
+                <div style={{ color: skill.color, fontSize: '32px' }}>{skill.icon}</div>
+                <h3>{skill.title}</h3>
+                <p>{skill.description}</p>
+              </SkillCard>
+            ))}
+          </SkillsGrid>
         </SkillsContainer>
       </Container>
     </SkillsSection>

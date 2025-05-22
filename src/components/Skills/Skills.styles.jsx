@@ -23,58 +23,20 @@ export const Title = styled(motion.h2)`
 `;
 
 export const SkillsContainer = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 `;
 
 export const SkillsGrid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 48px;
+  gap: 32px;
   margin-top: 32px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 32px;
-  }
-`;
-
-export const SoftSkills = styled.div`
-  background: white;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-
-  h3 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  li {
-    padding: 0.8rem 0;
-    color: var(--text-primary);
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-
-    &:before {
-      content: '•';
-      color: var(--primary-color);
-      font-weight: bold;
-      margin-right: 1rem;
-    }
+    gap: 24px;
   }
 `;
 
@@ -89,8 +51,8 @@ export const SkillCard = styled(motion.div)`
   transition: all 0.3s ease;
 
   div {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 40px;
+    margin-bottom: 16px;
   }
 
   h3 {
