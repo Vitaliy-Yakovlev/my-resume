@@ -82,36 +82,34 @@ export const ContactItem = styled(motion.a)`
     align-items: center;
     gap: 8px;
     margin-left: auto;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      border-radius: 50%;
+      transition: transform var(--transition);
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 
   .telegram-icon {
     font-size: 20px;
     color: #0088cc;
-    transition: transform var(--transition);
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   .viber-icon {
     font-size: 20px;
     color: #7360f2;
-    transition: transform var(--transition);
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   .whatsapp-icon {
     font-size: 20px;
     color: #25d366;
-    transition: transform var(--transition);
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   &:hover {

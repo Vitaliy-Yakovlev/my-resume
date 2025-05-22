@@ -102,9 +102,30 @@ function Contact() {
                 <FaPhone />
                 +38 050 909 06 60
                 <div className="messenger-icons">
-                  <FaTelegram className="telegram-icon" />
-                  <FaViber className="viber-icon" />
-                  <FaWhatsapp className="whatsapp-icon" />
+                  <a 
+                    href="https://t.me/+380509090660" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FaTelegram className="telegram-icon" />
+                  </a>
+                  <a 
+                    href="https://invite.viber.com/?g2=AQAJEjmgJQkrBU5D0KiXwGu7kd5TGwkJtUxn4S6qKZY3f4lkYs0YZVzDGQn0mLqq" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FaViber className="viber-icon" />
+                  </a>
+                  <a 
+                    href="https://wa.me/380509090660" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FaWhatsapp className="whatsapp-icon" />
+                  </a>
                 </div>
               </ContactItem>
               <ContactItem href="tel:+393335787465" variants={itemVariants}>
