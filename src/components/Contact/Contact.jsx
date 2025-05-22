@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTelegram, FaViber, FaWhatsapp } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import {
   ContactSection,
@@ -101,6 +101,11 @@ function Contact() {
               <ContactItem href="tel:+380509090660" variants={itemVariants}>
                 <FaPhone />
                 +38 050 909 06 60
+                <div style={{ marginLeft: '8px', display: 'flex', gap: '8px' }}>
+                  <FaTelegram className="telegram-icon" />
+                  <FaViber className="viber-icon" />
+                  <FaWhatsapp className="whatsapp-icon" />
+                </div>
               </ContactItem>
               <ContactItem href="tel:+393335787465" variants={itemVariants}>
                 <FaPhone />

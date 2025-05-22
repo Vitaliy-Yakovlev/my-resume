@@ -20,29 +20,29 @@ export const FooterContent = styled.div`
   margin-bottom: 2rem;
 `;
 
+export const FooterGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 48px;
+  margin-bottom: 32px;
+`;
+
 export const FooterColumn = styled(motion.div)`
   h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: #fff;
-    position: relative;
-    padding-bottom: 0.5rem;
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 40px;
-      height: 2px;
-      background: var(--accent-color);
-    }
+    font-size: 21px;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
   }
 
   p {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.8;
-    margin-bottom: 1rem;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
   }
 
   ul {
@@ -51,7 +51,8 @@ export const FooterColumn = styled(motion.div)`
   }
 
   li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 13px;
+    color: var(--text-secondary);
   }
 
   a {
@@ -67,14 +68,19 @@ export const FooterColumn = styled(motion.div)`
 
 export const SocialLinks = styled.div`
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
 `;
 
 export const SocialLink = styled(motion.a)`
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition);
+
+  svg {
+    font-size: 24px;
+  }
 
   &:hover {
     color: var(--primary-color);
@@ -83,8 +89,8 @@ export const SocialLink = styled(motion.a)`
 
 export const Copyright = styled.div`
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-size: 14px;
 `;

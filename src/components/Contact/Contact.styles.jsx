@@ -14,9 +14,9 @@ export const Container = styled.div`
 `;
 
 export const Title = styled(motion.h2)`
-  font-size: 2.5rem;
+  font-size: 40px;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
   background: linear-gradient(120deg, var(--text-primary) 0%, var(--primary-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -25,45 +25,46 @@ export const Title = styled(motion.h2)`
 export const ContactContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 64px;
   align-items: start;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 32px;
   }
 `;
 
 export const ContactInfo = styled(motion.div)`
   h3 {
-    font-size: 1.8rem;
+    font-size: 29px;
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
   }
 
   p {
     color: var(--text-secondary);
     line-height: 1.8;
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
 `;
 
 export const ContactDetails = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 `;
 
 export const ContactItem = styled(motion.a)`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
   color: var(--text-primary);
   text-decoration: none;
   transition: all 0.3s ease;
+  flex-wrap: wrap;
 
   svg {
-    font-size: 1.5rem;
+    font-size: 24px;
     color: var(--primary-color);
   }
 
@@ -71,14 +72,49 @@ export const ContactItem = styled(motion.a)`
     color: var(--primary-color);
     transform: translateX(5px);
   }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+
+    svg {
+      font-size: 19px;
+      transition: transform var(--transition);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .telegram-icon {
+      color: #0088cc;
+    }
+
+    .viber-icon {
+      color: #7360f2;
+    }
+
+    .whatsapp-icon {
+      color: #25d366;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+      margin-top: 8px;
+      width: 100%;
+      justify-content: center;
+    }
+  }
 `;
 
 export const ContactForm = styled(motion.form)`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
   background: white;
-  padding: 2rem;
+  padding: 32px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 `;
@@ -86,7 +122,7 @@ export const ContactForm = styled(motion.form)`
 export const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px;
 
   label {
     color: var(--text-primary);
@@ -95,10 +131,10 @@ export const FormGroup = styled.div`
 
   input,
   textarea {
-    padding: 0.8rem;
+    padding: 13px;
     border: 1px solid #e1e1e1;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px;
     transition: all 0.3s ease;
 
     &:focus {
@@ -115,7 +151,7 @@ export const FormGroup = styled.div`
 
   small {
     color: var(--text-secondary);
-    font-size: 0.875rem;
+    font-size: 14px;
   }
 `;
 
@@ -157,8 +193,8 @@ export const SubmitButton = styled(motion.button)`
 `;
 
 export const SuccessMessage = styled.div`
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 16px;
+  padding: 16px;
   background-color: #d4edda;
   color: #155724;
   border-radius: 4px;
@@ -166,8 +202,8 @@ export const SuccessMessage = styled.div`
 `;
 
 export const ErrorMessage = styled.div`
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 16px;
+  padding: 16px;
   background-color: #f8d7da;
   color: #721c24;
   border-radius: 4px;

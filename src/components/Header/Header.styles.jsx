@@ -7,25 +7,29 @@ export const HeaderContainer = styled(motion.header)`
   left: 0;
   right: 0;
   z-index: 1000;
-  background: ${props => (props.scrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent')};
+  background: ${props => 
+    props.scrolled 
+      ? 'linear-gradient(135deg, var(--text-primary) 0%, #2c3338 100%)'
+      : 'transparent'
+  };
   backdrop-filter: ${props => (props.scrolled ? 'blur(10px)' : 'none')};
-  box-shadow: ${props => (props.scrolled ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none')};
-  transition: all 0.3s ease;
+  box-shadow: ${props => (props.scrolled ? '0 2px 10px rgba(0, 0, 0, 0.2)' : 'none')};
+  transition: all var(--transition);
 `;
 
 export const Nav = styled.nav`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 16px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
 export const Logo = styled(motion.a)`
-  font-size: 1.8rem;
+  font-size: 29px;
   font-weight: 700;
-  color: var(--primary-color);
+  color: white;
   text-decoration: none;
   background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
@@ -34,7 +38,7 @@ export const Logo = styled(motion.a)`
 
 export const NavLinks = styled(motion.div)`
   display: flex;
-  gap: 2rem;
+  gap: 32px;
 
   @media (max-width: 768px) {
     display: none;
@@ -42,11 +46,11 @@ export const NavLinks = styled(motion.div)`
 `;
 
 export const NavLink = styled(motion.a)`
-  color: var(--text-primary);
+  color: ${({ $scrolled }) => ($scrolled ? 'white' : 'var(--text-primary)')};
   text-decoration: none;
   font-weight: 500;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 8px 0;
 
   &:after {
     content: '';
@@ -55,8 +59,12 @@ export const NavLink = styled(motion.a)`
     bottom: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s ease;
+    background: ${({ $scrolled }) => ($scrolled ? 'white' : 'var(--primary-color)')};
+    transition: width var(--transition);
+  }
+
+  &:hover {
+    color: ${({ $scrolled }) => ($scrolled ? 'rgba(255, 255, 255, 0.8)' : 'var(--primary-color)')};
   }
 
   &:hover:after {
@@ -66,12 +74,12 @@ export const NavLink = styled(motion.a)`
 
 export const MobileMenuButton = styled.button`
   display: none;
-  font-size: 1.5rem;
-  color: var(--text-primary);
+  font-size: 24px;
+  color: ${({ $scrolled }) => ($scrolled ? 'white' : 'var(--text-primary)')};
   cursor: pointer;
   background: none;
   border: none;
-  padding: 0.5rem;
+  padding: 8px;
   z-index: 1001;
 
   @media (max-width: 768px) {
@@ -86,22 +94,26 @@ export const MobileMenu = styled(motion.div)`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.98);
-  padding: 5rem 2rem;
+  background: var(--background-dark);
+  padding: 80px 32px;
   z-index: 1000;
 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 32px;
   }
 `;
 
 export const MobileNavLink = styled(motion.a)`
-  color: var(--text-primary);
+  color: ${({ $scrolled }) => ($scrolled ? 'white' : 'var(--text-primary)')};
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 500;
-  padding: 0.5rem;
+  padding: 8px;
+
+  &:hover {
+    color: var(--primary-color);
+  }
 `;

@@ -13,9 +13,9 @@ export const Container = styled.div`
 `;
 
 export const Title = styled(motion.h2)`
-  font-size: 2.5rem;
+  font-size: 40px;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
   background: linear-gradient(120deg, var(--text-primary) 0%, var(--primary-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -58,17 +58,17 @@ export const ProjectContent = styled.div`
 `;
 
 export const ProjectTitle = styled.h3`
-  font-size: 1.5rem;
-  color: #212529;
-  margin-bottom: 10px;
+  font-size: 24px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
   font-weight: 600;
 `;
 
 export const ProjectDescription = styled.p`
-  color: #6c757d;
-  font-size: 1rem;
+  font-size: 16px;
+  color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   flex-grow: 1;
 `;
 
@@ -129,4 +129,10 @@ export const ProjectLink = styled(motion.a)`
     outline: none;
     box-shadow: 0 0 0 2px rgba(41, 151, 255, 0.2);
   }
+`;
+
+export const ProjectTags = styled.div`
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
 `;

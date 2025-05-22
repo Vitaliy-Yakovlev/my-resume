@@ -54,6 +54,9 @@ function Header() {
       setScrolled(window.scrollY > 50);
     };
 
+    // Check scroll position immediately
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -81,12 +84,18 @@ function Header() {
         </Logo>
         <NavLinks>
           {navItems.map(item => (
-            <NavLink key={item.name} href={item.href} variants={navLinkVariants} whileHover="hover">
+            <NavLink 
+              key={item.name} 
+              href={item.href} 
+              variants={navLinkVariants} 
+              whileHover="hover"
+              $scrolled={scrolled}
+            >
               {item.name}
             </NavLink>
           ))}
         </NavLinks>
-        <MobileMenuButton onClick={toggleMenu}>
+        <MobileMenuButton onClick={toggleMenu} $scrolled={scrolled}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </MobileMenuButton>
       </Nav>
@@ -100,6 +109,7 @@ function Header() {
                 onClick={closeMenu}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
+                $scrolled={scrolled}
               >
                 {item.name}
               </MobileNavLink>

@@ -14,9 +14,9 @@ export const Container = styled.div`
 `;
 
 export const Title = styled(motion.h2)`
-  font-size: 2.5rem;
+  font-size: 40px;
   color: var(--text-primary);
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   text-align: center;
   background: linear-gradient(120deg, var(--text-primary) 0%, var(--primary-color) 100%);
   -webkit-background-clip: text;
@@ -26,7 +26,7 @@ export const Title = styled(motion.h2)`
 export const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 32px;
   align-items: center;
 
   @media (max-width: 768px) {
@@ -36,6 +36,8 @@ export const Content = styled.div`
 `;
 
 export const ImageContainer = styled(motion.div)`
+  display: flex;
+  justify-content: flex-end;
   img {
     width: 100%;
     max-width: 400px;
@@ -51,36 +53,34 @@ export const ImageContainer = styled(motion.div)`
   }
 
   @media (max-width: 768px) {
-    order: -1;
-    display: flex;
     justify-content: center;
   }
 `;
 
 export const TextContent = styled(motion.div)`
   h3 {
-    font-size: 1.8rem;
+    font-size: 29px;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     font-weight: 600;
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 18px;
     color: var(--text-primary);
     line-height: 1.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
     opacity: 0.9;
   }
 `;
 
 export const LanguageSkills = styled.div`
-  margin-top: 2rem;
+  margin-top: 32px;
 
   h4 {
-    font-size: 1.2rem;
+    font-size: 19px;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
   }
 
   ul {
@@ -89,9 +89,9 @@ export const LanguageSkills = styled.div`
   }
 
   li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     color: var(--text-primary);
-    font-size: 1.1rem;
+    font-size: 18px;
   }
 `;
 
@@ -101,7 +101,7 @@ export const CertificateButton = styled(motion.button)`
   border: 1px solid var(--primary-color);
   padding: 8px 20px;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -127,6 +127,6 @@ export const CertificateButton = styled(motion.button)`
   }
 
   svg {
-    font-size: 1.2rem;
+    font-size: 19px;
   }
 `;
