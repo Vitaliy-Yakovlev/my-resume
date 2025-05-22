@@ -2,8 +2,12 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const ProjectsSection = styled.section`
-  padding: 100px 0;
+  padding: 60px 0;
   background: linear-gradient(180deg, var(--background-light) 0%, var(--background-dark) 100%);
+
+  @media (min-width: 768px) {
+    padding: 80px 0;
+  }
 `;
 
 export const Container = styled.div`
@@ -33,7 +37,7 @@ export const ProjectCard = styled(motion.article)`
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -111,7 +115,7 @@ export const ProjectLink = styled(motion.a)`
   color: white;
   border: 1px solid var(--primary-color);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition);
   width: 100%;
 
   &:hover {

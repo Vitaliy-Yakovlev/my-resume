@@ -2,9 +2,13 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const ContactSection = styled.section`
-  padding: 80px 0;
+  padding: 60px 0;
   background: linear-gradient(135deg, var(--background-light) 0%, var(--background-dark) 100%);
   scroll-margin-top: 70px;
+
+  @media (min-width: 768px) {
+    padding: 80px 0;
+  }
 `;
 
 export const Container = styled.div`
@@ -57,55 +61,66 @@ export const ContactDetails = styled.div`
 export const ContactItem = styled(motion.a)`
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   color: var(--text-primary);
   text-decoration: none;
-  transition: all 0.3s ease;
-  flex-wrap: wrap;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all var(--transition);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 
   svg {
     font-size: 24px;
     color: var(--primary-color);
   }
 
-  &:hover {
-    color: var(--primary-color);
-    transform: translateX(5px);
-  }
-
-  div {
+  .messenger-icons {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-left: auto;
+  }
 
-    svg {
-      font-size: 19px;
-      transition: transform var(--transition);
+  .telegram-icon {
+    font-size: 20px;
+    color: #0088cc;
+    transition: transform var(--transition);
 
-      &:hover {
-        transform: scale(1.1);
-      }
+    &:hover {
+      transform: scale(1.1);
     }
+  }
 
-    .telegram-icon {
-      color: #0088cc;
-    }
+  .viber-icon {
+    font-size: 20px;
+    color: #7360f2;
+    transition: transform var(--transition);
 
-    .viber-icon {
-      color: #7360f2;
+    &:hover {
+      transform: scale(1.1);
     }
+  }
 
-    .whatsapp-icon {
-      color: #25d366;
-    }
+  .whatsapp-icon {
+    font-size: 20px;
+    color: #25d366;
+    transition: transform var(--transition);
 
-    @media (max-width: 768px) {
-      margin-left: 0;
-      margin-top: 8px;
-      width: 100%;
-      justify-content: center;
+    &:hover {
+      transform: scale(1.1);
     }
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 `;
 
@@ -135,7 +150,7 @@ export const FormGroup = styled.div`
     border: 1px solid #e1e1e1;
     border-radius: 5px;
     font-size: 16px;
-    transition: all 0.3s ease;
+    transition: all var(--transition);
 
     &:focus {
       outline: none;
@@ -166,7 +181,7 @@ export const SubmitButton = styled(motion.button)`
   border-radius: 5px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition);
   width: 100%;
 
   &:hover {

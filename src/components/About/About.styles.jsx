@@ -2,9 +2,13 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const AboutSection = styled.section`
-  padding: 100px 0 60px;
+  padding: 60px 0;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   scroll-margin-top: 70px;
+
+  @media (min-width: 768px) {
+    padding: 80px 0;
+  }
 `;
 
 export const Container = styled.div`
@@ -45,7 +49,7 @@ export const ImageContainer = styled(motion.div)`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     object-fit: cover;
     aspect-ratio: 1;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition);
 
     &:hover {
       transform: scale(1.02);
@@ -104,11 +108,15 @@ export const CertificateButton = styled(motion.button)`
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
   &:hover {
     background: white;

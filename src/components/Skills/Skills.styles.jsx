@@ -2,9 +2,13 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const SkillsSection = styled.section`
-  padding: 80px 0;
+  padding: 60px 0;
   background: linear-gradient(135deg, var(--background-light) 0%, var(--background-dark) 100%);
   scroll-margin-top: 70px;
+
+  @media (min-width: 768px) {
+    padding: 80px 0;
+  }
 `;
 
 export const Container = styled.div`

@@ -6,7 +6,7 @@ export const HeaderContainer = styled(motion.header)`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 100;
   background: ${props => 
     props.scrolled 
       ? 'linear-gradient(135deg, var(--text-primary) 0%, #2c3338 100%)'
@@ -81,6 +81,8 @@ export const MobileMenuButton = styled.button`
   border: none;
   padding: 8px;
   z-index: 1001;
+  position: relative;
+  transition: color var(--transition);
 
   @media (max-width: 768px) {
     display: block;
@@ -94,9 +96,19 @@ export const MobileMenu = styled(motion.div)`
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--background-dark);
+  width: 100vw;
+  height: 100vh;
+  background: ${props => 
+    props.$scrolled 
+      ? 'linear-gradient(135deg, var(--text-primary) 0%, #2c3338 100%)'
+      : 'var(--background-light)'
+  };
+  backdrop-filter: ${props => (props.$scrolled ? 'blur(10px)' : 'none')};
   padding: 80px 32px;
-  z-index: 1000;
+  z-index: 999;
+  overflow-y: auto;
+  opacity: 0.98;
+  transition: all var(--transition);
 
   @media (max-width: 768px) {
     display: flex;
@@ -112,6 +124,9 @@ export const MobileNavLink = styled(motion.a)`
   font-size: 24px;
   font-weight: 500;
   padding: 8px;
+  width: 100%;
+  text-align: center;
+  transition: color var(--transition);
 
   &:hover {
     color: var(--primary-color);

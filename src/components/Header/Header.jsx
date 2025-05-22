@@ -101,7 +101,13 @@ function Header() {
       </Nav>
       <AnimatePresence>
         {isOpen && (
-          <MobileMenu variants={mobileMenuVariants} initial="closed" animate="open" exit="closed">
+          <MobileMenu 
+            variants={mobileMenuVariants} 
+            initial="closed" 
+            animate="open" 
+            exit="closed"
+            $scrolled={scrolled}
+          >
             {navItems.map(item => (
               <MobileNavLink
                 key={item.name}

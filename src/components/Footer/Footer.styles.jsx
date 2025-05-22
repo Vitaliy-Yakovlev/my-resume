@@ -5,6 +5,10 @@ export const FooterSection = styled.footer`
   background: linear-gradient(135deg, var(--text-primary) 0%, #2c3338 100%);
   color: white;
   padding: 40px 0 20px;
+
+  @media (max-width: 768px) {
+    padding: 32px 0 16px;
+  }
 `;
 
 export const Container = styled.div`
@@ -18,6 +22,11 @@ export const FooterContent = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const FooterGrid = styled.div`
@@ -36,6 +45,12 @@ export const FooterColumn = styled(motion.div)`
     padding-bottom: 8px;
     border-bottom: 2px solid var(--primary-color);
     display: inline-block;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      margin-bottom: 16px;
+      padding-bottom: 6px;
+    }
   }
 
   p {
@@ -43,6 +58,11 @@ export const FooterColumn = styled(motion.div)`
     line-height: 1.6;
     color: var(--text-secondary);
     margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
   }
 
   ul {
@@ -53,12 +73,17 @@ export const FooterColumn = styled(motion.div)`
   li {
     margin-bottom: 13px;
     color: var(--text-secondary);
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
   }
 
   a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color var(--transition);
 
     &:hover {
       color: var(--accent-color);
@@ -71,6 +96,11 @@ export const SocialLinks = styled.div`
   align-items: center;
   gap: 16px;
   margin-top: 16px;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+    margin-top: 12px;
+  }
 `;
 
 export const SocialLink = styled(motion.a)`
@@ -80,6 +110,10 @@ export const SocialLink = styled(motion.a)`
 
   svg {
     font-size: 24px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   &:hover {
@@ -93,4 +127,9 @@ export const Copyright = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-secondary);
   font-size: 14px;
+
+  @media (max-width: 768px) {
+    padding-top: 16px;
+    font-size: 12px;
+  }
 `;

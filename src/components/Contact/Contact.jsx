@@ -101,7 +101,7 @@ function Contact() {
               <ContactItem href="tel:+380509090660" variants={itemVariants}>
                 <FaPhone />
                 +38 050 909 06 60
-                <div style={{ marginLeft: '8px', display: 'flex', gap: '8px' }}>
+                <div className="messenger-icons">
                   <FaTelegram className="telegram-icon" />
                   <FaViber className="viber-icon" />
                   <FaWhatsapp className="whatsapp-icon" />
