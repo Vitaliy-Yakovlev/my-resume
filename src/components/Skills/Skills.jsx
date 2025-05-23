@@ -108,6 +108,12 @@ const softSkills = [
     description: 'Meticulous focus on quality and precision',
     color: '#F44336',
   },
+  {
+    icon: '⏰',
+    title: 'Time Management',
+    description: 'Efficient planning and organization of work processes',
+    color: '#E91E63',
+  },
 ];
 
 const containerVariants = {

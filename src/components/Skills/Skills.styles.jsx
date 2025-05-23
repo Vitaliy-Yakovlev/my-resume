@@ -51,7 +51,6 @@ export const SkillCard = styled(motion.div)`
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
   transition: all 0.3s ease;
 
   div {
