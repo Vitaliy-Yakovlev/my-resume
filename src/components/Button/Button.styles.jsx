@@ -19,12 +19,14 @@ export const StyledButton = styled.button`
       white-space: nowrap;
       display: flex;
       align-items: center;
+      justify-content: center;
       cursor: pointer;
       user-select: none;
       appearance: none;
       text-decoration: none;
       text-align: center;
       transition: all 0.3s ease;
+      width: 100%;
 
       &:hover {
         background-color: white;
@@ -54,5 +56,5 @@ export const StyledButton = styled.button`
         margin-right: 8px;
         vertical-align: text-bottom;
       }
-    `}// ... existing code ...
+    `}
 `;
